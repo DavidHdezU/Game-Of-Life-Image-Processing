@@ -3,10 +3,9 @@ class Board{
   int alto;
   int ancho;
   
-  int tamano = 700;
   
  Board(){
-   this.board = new Cell[tamano][tamano];
+   this.board = new Cell[2000][2000];
  }
   Board(int i, int j){
     this.alto = i;
@@ -21,8 +20,8 @@ class Board{
   
   int sumaColorV(){
     int suma = 0;
-    for(int i= -1; i < 2; i++){
-      for(int j = -1; j < 2; j++){
+    for(int i= -1; i < 1; i++){
+      for(int j = -1; j < 1; j++){
         if(i == 0 && j == 0){
           suma += this.board[(this.alto+i)%this.alto][(this.ancho+j)%this.ancho].sumaColores();
         }

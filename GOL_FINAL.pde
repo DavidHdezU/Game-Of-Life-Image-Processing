@@ -7,9 +7,9 @@ Board board2;
 
 
 void setup() {
-  size(1500, 1500);
-  frameRate(100000);
-  pika = loadImage("color.jpeg");
+  size(2000, 2000);
+  frameRate(66666);
+  pika = loadImage("images_for_debug/galaxy2.jpg");
   board = new Board(pika.width, pika.height);
     loadPixels();
     pika.loadPixels();
@@ -53,6 +53,8 @@ void draw() {
               do{
                 all.randomDown();
               }while(all.sumaColores() < 500);
+            }else{
+              all.randomUp();
             }
           }
           else if(all.getState() == false){
@@ -60,6 +62,8 @@ void draw() {
               do{
                 all.randomUp();
               }while(all.sumaColores() >= 500);
+            }else{
+              all.randomDown();
             }
           }
         }
