@@ -3,19 +3,18 @@ class Board{
   int alto;
   int ancho;
   
-  
- Board(){
-   this.board = new Cell[2000][2000];
- }
   Board(int i, int j){
     this.alto = i;
     this.ancho = j;
     this.board = new Cell[i][j];
   }
   
-  int sumaVecinos(){
-    int suma  = 0;
-    return suma;
+  int getAlto(){
+    return this.alto;
+  }
+  
+  int getAncho(){
+    return this.ancho;
   }
   
   int sumaColorV(){
@@ -39,16 +38,6 @@ class Board{
        this.board[i][j] = cell;
      }
    }
-   
-   Board copia(){
-    Board copia = new Board();
-    for(int i = 0; i < this.board.length; i++){
-      for(int j = 0; j < this.board[i].length; j++){
-        copia.setNewCell(i,j, this.board[i][j]);
-      }
-    }
-    return copia;
-  }
   
 //
 }

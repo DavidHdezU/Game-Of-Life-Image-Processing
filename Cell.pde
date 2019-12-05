@@ -65,7 +65,7 @@ class Cell {
   void randomUp(){
     float number = random(3);
     int num = int(number);
-    float wins = random(5);
+    float wins = random(255);
     int newColor = this.getColorRGB();
     int newRandomColor = newColor + int(wins);
     if(num == 3){
@@ -88,14 +88,14 @@ class Cell {
    void randomDown(){
     float number = random(3);
     int num = int(number);
-    float loses = random (1);
+    float loses = random (255);
     int newColor = this.getColorRGB();
     int newRandomColor = newColor - int(loses);
     if(num == 3){
       if(!(newRandomColor > 255 && newRandomColor < 0)){
         this.setColorRGB(this.r, this.g, newRandomColor);
       }else{
-        this.setColorRGB(int(random(255)), int(random(255)), int(random(255)));
+        //this.setColorRGB(int(random(255)), int(random(255)), int(random(255)));
       }
     }
     else if(num == 2){
